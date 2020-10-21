@@ -1,5 +1,6 @@
 import { createElement } from "../utils/elements";
 import "./character.css";
+
 export function Character({ name, imgSrc }) {
   const avatar = createElement("img", {
     className: "character__img",
