@@ -9,9 +9,13 @@ import Search from "./components/Search";
 function App() {
   const header = Header();
   const characterContainer = Characters();
+  const nextButton = createElement("button", {
+    innerText: "Load more",
+    onclick: () => alert("Load more"),
+  });
   const main = createElement("main", {
     className: "main",
-    children: [characterContainer],
+    children: [characterContainer, nextButton],
   });
   async function loadCharacters(name) {
     const characters = await getCharacters(name);

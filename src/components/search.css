@@ -21,3 +21,7 @@
 .search > input {
   padding: 0.5rem;
 }
+
+.search__btn {
+  cursor: pointer;
+}

@@ -7,6 +7,7 @@ function Search({ onchange }) {
   });
 
   const button = createElement("button", {
+    className: "search__btn",
     innerText: "🔍",
   });
 
