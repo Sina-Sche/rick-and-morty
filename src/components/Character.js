@@ -1,6 +1,7 @@
 import { createElement } from "../utils/elements";
 import "./character.css";
-export function Character({ name, imgSrc }) {
+
+export function Character({ name, imgSrc, gender }) {
   const avatar = createElement("img", {
     className: "character__img",
     src: imgSrc,
@@ -13,7 +14,7 @@ export function Character({ name, imgSrc }) {
 
   const container = createElement("article", {
     className: "character",
-    children: [title, avatar],
+    children: [title, avatar, gender],
   });
 
   return container;

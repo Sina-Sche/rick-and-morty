@@ -4,15 +4,13 @@ export async function getCharacterById(id) {
   const character = await response.json();
   return character;
 }
-export async function getCharacters() {
-  const url = `https://rickandmortyapi.com/api/character/`;
+
+export async function getCharacters(name) {
+  let url = `https://rickandmortyapi.com/api/character/`;
+  if (name) {
+    url += `?name=${name}`;
+  }
   const response = await fetch(url);
   const data = await response.json();
   return data.results;
-}
-export async function getCharactersbyName(name) {
-  const url = `https://rickandmortyapi.com/api/character/?name=${name}`;
-  const response = await fetch(url);
-  const names = await response.json();
-  return names.results;
 }
