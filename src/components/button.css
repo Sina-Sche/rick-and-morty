@@ -1,0 +1,15 @@
+.button {
+  background: var(--primary-color);
+  color: var(--header-color);
+  height: 50px;
+  width: 200px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: all 0.2s linear;
+}
+
+.button:hover {
+  background: var(--btn-hover-color);
+  color: var(--primary-color);
+}
