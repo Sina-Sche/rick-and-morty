@@ -25,24 +25,26 @@ export function Character({ name, imgSrc, isFavourite }) {
     onclick: () => {
       // onclick: variable with current favorites -> verwandeln in JSON
       //get favorites from localStorage ||or empty, if there are no favs yet
-      let currentFavorites = JSON.parse(
-        localStorage.getItem("favorites") || "[]"
+      let currentFavourites = JSON.parse(
+        localStorage.getItem("favourites") || "[]"
       );
 
       //condition: currentFavorites already contain selected name,
-      const isFavorite = currentFavorites.includes(name);
+      const isFavourite = currentFavourites.includes(name);
       //if this is true, then take the currentFavourites and filter them, by removing the name of the selected favourite
-      if (isFavorite) {
-        currentFavorites = currentFavorites.filter(
+      if (isFavourite) {
+        currentFavourites = currentFavourites.filter(
           //!== strict inequality operator - favourite can not be equal to name
-          (favorite) => favorite !== name
+          (favouriteBtn) => favouriteBtn !== name
         );
 
-        //if selected name is not yet a favourite, then push name to array
+        //if selected name is not yet a favourite, then push name to currentFavorites
       } else {
-        currentFavorites.push(name);
+        currentFavourites.push(name);
       }
-      localStorage.setItem("favourites", JSON.stringify(currentFavorites));
+
+      //store
+      localStorage.setItem("favourites", JSON.stringify(currentFavourites));
       favouriteImg.src = !isFavourite ? starActiveSrc : starInactiveSrc;
     },
 
