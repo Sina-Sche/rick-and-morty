@@ -32,3 +32,26 @@
 .characters > * {
   margin: 10px;
 }
+.favourite__img {
+  height: 50px;
+  width: 50px;
+}
+.favourite__img:hover {
+  color: white;
+}
+
+.favourite__btn {
+  background: none;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+.favourite__btn:hover {
+  border: 1px solid white;
+}
+
+.character__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
