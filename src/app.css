@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "getschwifty";
+  src: url("./assets/fonts/getschwifty.woff2"),
+    url("./assets/fonts/getschwifty.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -7,9 +15,10 @@
   --primary-color: #eee;
   --header-color: #202329;
   --header-bg-color: #eee;
-  --bg-color: rgb(28, 26, 31);
-  --card-bg-color: #252a38;
-  --font-family: "Patrick Hand SC", cursive;
+  --bg-color: rgb(32, 37, 73);
+  --card-bg-color: rgb(23, 132, 146);
+  --btn-hover-color: linear-gradient(45deg, #19c59a, rgb(53, 85, 182));
+  --font-family: "getschwifty";
 }
 
 html {
@@ -24,6 +33,5 @@ body {
 }
 .main {
   padding: 30px 20px;
-  display: flex;
-  flex-wrap: wrap;
+  text-align: center;
 }

@@ -1,14 +1,15 @@
 import "./header.css";
 import { createElement } from "../utils/elements";
+import imgSrc from "../assets/rickandmorty.png";
 
 function Header() {
-  const title = createElement("h1", {
-    innerText: "Rick and Morty Characters",
+  const logo = createElement("img", {
+    className: "logo__img",
+    src: imgSrc,
   });
-
   const header = createElement("header", {
     className: "header",
-    children: [title],
+    children: [logo],
   });
   return header;
 }
