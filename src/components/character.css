@@ -47,7 +47,7 @@
   margin-top: 10px;
 }
 .favourite__btn:hover {
-  border: 1px solid white;
+  outline: 1px solid white;
 }
 
 .character__header {
